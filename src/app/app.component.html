@@ -1,7 +1,9 @@
-<div [hidden]="courses.length == 0">
-  <h1>Courses are as follows</h1>
-</div>
+<div *ngIf="courses.length > 0; then showCourses else noCourses"></div>
 
-<div [hidden]= "courses.length > 0">
-  No course available
-</div>
+<ng-template #showCourses>
+  <h1>Courses are present</h1>
+</ng-template>
+
+<ng-template #noCourses>
+  <h1>No courses present</h1>
+</ng-template>
