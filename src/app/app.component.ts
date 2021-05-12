@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives-demo';
-  courses = [1, 2];
+  viewMode = 'map';
 }
