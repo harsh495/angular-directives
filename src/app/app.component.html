@@ -1,5 +1,8 @@
+<button (click)="onAdd()">Add new course</button>
+
 <ul>
-  <li *ngFor="let course of courses; even as isEven; index as i">
-    <span *ngIf="isEven">index no. {{i}} --{{course.name}}-- Showing even indexed courses</span>
+  <li *ngFor="let course of courses">
+    {{course.name}}
+    <button (click)="onRemove(course)">Delete a course</button>
   </li>
 </ul>
